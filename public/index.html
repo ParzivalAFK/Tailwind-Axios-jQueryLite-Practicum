@@ -4,49 +4,70 @@
     <title>Student Logs</title>
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.ico" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="bg-blue-500 text-white p-4">Tailwind Test!</div>
-    <form>
-      <select
-        aria-label="Select Course"
-        id="course"
-        name="course"
-        data-cy="course_select"
-      >
-        <option selected value="">Choose Courses</option></select
-      ><br />
+  <body class="bg-gray-100">
+    <div class="bg-yellow-500 text-white text-center py-4">
+      <h1 class="text-l font-bold">
+        Tailwind Axios jQueryLite Practicum - Christopher Wilkinson
+      </h1>
+    </div>
+    <div class="max-w-xl mx-auto mt-8 p-4 bg-white rounded shadow-md">
+      <form>
+        <div class="mb-0">
+          <select
+            aria-label="Select Course"
+            id="course"
+            name="course"
+            data-cy="course_select"
+            class="w-full p-2 border rounded"
+          >
+            <option selected value="">Choose Courses</option>
+          </select>
+        </div>
+        <br />
+        <div class="mb-4">
+          <label
+            for="uvuId"
+            class="block text-gray-600 font-medium"
+            id="uvuIdLabel"
+            style="display: none"
+            >UVU ID</label
+          ><br />
+          <input
+            type="text"
+            id="uvuId"
+            name="uvuId"
+            data-cy="uvuId_input"
+            placeholder="10234567"
+            maxlength="8"
+            style="display: none"
+            class="w-full p-2 mt-1 border rounded"
+          />
+        </div>
 
-      <label for="uvuId" id="uvuIdLabel" style="display: none">UVU ID</label
-      ><br />
-      <input
-        type="text"
-        id="uvuId"
-        name="uvuId"
-        data-cy="uvuId_input"
-        placeholder="10234567"
-        maxlength="8"
-        style="display: none"
-      />
+        <ul data-cy="logs" class="mb-4"></ul>
+        <div class="mb-4">
+          <label class="block text-gray-600 font-medium">New Log</label><br />
+          <textarea
+            style="height: 75px"
+            aria-label="add log textarea"
+            data-cy="log_textarea"
+            class="w-full p-2 mt-1 border rounded"
+          ></textarea>
+        </div>
+        <br />
 
-      <h3 id="uvuIdDisplay" data-cy="uvuIdDisplay">
-        Studnet Logs for 10234567
-      </h3>
-      <ul data-cy="logs"></ul>
-
-      <label>New Log</label><br />
-      <textarea
-        style="height: 75px"
-        aria-label="add log textarea"
-        data-cy="log_textarea"
-      ></textarea
-      ><br />
-
-      <button type="submit" data-cy="add_log_btn" disabled>Add Log</button>
-    </form>
-
+        <button
+          type="submit"
+          data-cy="add_log_btn"
+          disabled
+          class="bg-yellow-500 hover:bg-yellow-600 text-white rounded py-2 px-4"
+        >
+          Add Log
+        </button>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
