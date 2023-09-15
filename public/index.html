@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Student Logs</title>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-blue-500 text-white p-4">Tailwind Test!</div>
+    <form>
+      <select
+        aria-label="Select Course"
+        id="course"
+        name="course"
+        data-cy="course_select"
+      >
+        <option selected value="">Choose Courses</option></select
+      ><br />
+
+      <label for="uvuId" id="uvuIdLabel" style="display: none">UVU ID</label
+      ><br />
+      <input
+        type="text"
+        id="uvuId"
+        name="uvuId"
+        data-cy="uvuId_input"
+        placeholder="10234567"
+        maxlength="8"
+        style="display: none"
+      />
+
+      <h3 id="uvuIdDisplay" data-cy="uvuIdDisplay">
+        Studnet Logs for 10234567
+      </h3>
+      <ul data-cy="logs"></ul>
+
+      <label>New Log</label><br />
+      <textarea
+        style="height: 75px"
+        aria-label="add log textarea"
+        data-cy="log_textarea"
+      ></textarea
+      ><br />
+
+      <button type="submit" data-cy="add_log_btn" disabled>Add Log</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
